@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Newsflow China — Visão diária</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #5c5c5c;
+      --border: #e5e5e5;
+      --accent: #0d47a1;
+      --accent-soft: #e3f2fd;
+      --principal-bg: #f5f5f5;
+      --radius: 8px;
+      --shadow: 0 1px 3px rgba(0,0,0,.06);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--text);
+      background: var(--bg);
+      min-height: 100vh;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 24px 20px 48px; }
+    .header {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .header h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.75rem;
+      font-weight: 400;
+      margin: 0 0 8px 0;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .header .sub {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 24px;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .meta-bar strong { color: var(--text); font-weight: 500; }
+    .stats { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+    .stat {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .source-section { margin-top: 32px; }
+    .section-title {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.125rem;
+      font-weight: 400;
+      margin: 28px 0 12px 0;
+      color: var(--text);
+      letter-spacing: -0.01em;
+    }
+    .section-title:first-of-type { margin-top: 0; }
+    .section-desc { font-size: 0.8125rem; color: var(--text-muted); margin: 0 0 16px 0; }
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .card:hover { border-color: #ccc; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+    .card.principal { background: var(--principal-bg); border-left: 3px solid var(--accent); }
+    .card h2 { font-size: 1rem; font-weight: 600; margin: 0 0 8px 0; line-height: 1.35; }
+    .card h2 a { color: var(--text); text-decoration: none; }
+    .card h2 a:hover { color: var(--accent); text-decoration: underline; }
+    .card .meta { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px; }
+    .card .summary { font-size: 0.875rem; color: var(--text-muted); margin: 0; line-height: 1.45; }
+    .card .summary:empty { display: none; }
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .wrap { padding: 16px 14px 32px; }
+      .header { padding: 20px 18px; }
+      .header h1 { font-size: 1.5rem; }
+      .card { padding: 14px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <h1>Newsflow China</h1>
+      <p class="sub" style="color:var(--accent);font-weight:500;">Tradução automática para português (EN/ZH → PT)</p>
+      <div class="stats">
+        <span class="stat">26 notícias no total</span>
+        <span class="stat">Janela: últimas 24 h</span>
+      </div>
+      <div class="meta-bar">
+        <span><strong>Fontes:</strong> Global Times, Xinhua e SCMP</span>
+        <span><strong>Atualizado em</strong> 18/02/2026 às 18:08</span>
+      </div>
+    </header>
+
+
+    <section class="source-section" aria-label="Global Times — China">
+      <h2 class="section-title">Global Times — China</h2>
+      <p class="section-desc">18/02/2026 às 18:08 (última atualização)</p>
+      <h3 class="section-title" style="font-size:1rem;margin-top:16px;">Últimas 24 horas</h3>
+
+      <article class="card">
+        <h2><a href="https://www.globaltimes.cn/page/202602/1355485.shtml" target="_blank" rel="noopener">Xu Mengtao da China vence aéreos de esqui livre feminino em Milão-Cortina 2026</a></h2>
+        <p class="meta"><span>18:38 · Global Times</span></p>
+        <p class="summary">Xu Mengtao da China vence aéreos de esqui livre feminino em Milão-Cortina 2026</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.globaltimes.cn/page/202602/1355483.shtml" target="_blank" rel="noopener">Su Yiming conquista o título de snowboard Slopestyle masculino pelo primeiro ouro da China em Milão-Cortina</a></h2>
+        <p class="meta"><span>17:25 · Xinhua</span></p>
+        <p class="summary">Su Yiming conquistou o ouro na final do snowboard slopestyle masculino nos Jogos Olímpicos de Inverno de Milão-Cortina na quarta-feira, entregando a primeira medalha de ouro para a China nos Jogos.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.globaltimes.cn/page/202602/1355480.shtml" target="_blank" rel="noopener">Chanceler alemão Merz estende saudações pelo Festival da Primavera e antecipa visita à China</a></h2>
+        <p class="meta"><span>11:30 · Chen Xi</span></p>
+        <p class="summary">O chanceler alemão, Friedrich Merz, enviou saudações de Ano Novo Chinês na plataforma X na terça-feira, expressando sua esperança de visitar a China em breve.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.globaltimes.cn/page/202602/1355478.shtml" target="_blank" rel="noopener">Investimento de US$ 36 bilhões do Japão nos EUA, parte de acordo de US$ 550 bilhões, visto como “promessa de lealdade” política: especialista chinês</a></h2>
+        <p class="meta"><span>10:30</span></p>
+        <p class="summary"></p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.globaltimes.cn/page/202602/1355477.shtml" target="_blank" rel="noopener">Conselho de Estado supervisionará investigação sobre naufrágio de barco na província de Yunnan, sudoeste da China</a></h2>
+        <p class="meta"><span>10:11 · Global Times</span></p>
+        <p class="summary">O Gabinete do Comitê de Segurança do Trabalho do Conselho de Estado decidiu supervisionar a investigação sobre o acidente de naufrágio de um barco ocorrido na terça-feira na cidade de Chuxiong, província de Yunnan, no sudoeste da China, que fez com que 26 pessoas a bordo caíssem no ...</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.globaltimes.cn/page/202602/1355473.shtml" target="_blank" rel="noopener">Xi envia cartão de Ano Novo Chinês em troca de amigos no estado americano de Iowa</a></h2>
+        <p class="meta"><span>08:10 · Xinhua</span></p>
+        <p class="summary">O presidente chinês, Xi Jinping, respondeu na segunda-feira a amigos no estado americano de Iowa e enviou-lhes um cartão de Ano Novo Chinês, dizendo que, independentemente de como a situação evolua, o desejo dos povos chinês e americano de ...</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.globaltimes.cn/page/202602/1355472.shtml" target="_blank" rel="noopener">A superestrela Gu chama os Jogos Olímpicos de Inverno Milão-Cortina de &quot;privilégio&quot; depois de ganhar a segunda prata</a></h2>
+        <p class="meta"><span>08:02 · Xinhua</span></p>
+        <p class="summary">Chamando os Jogos Olímpicos de Inverno Milão-Cortina de &quot;privilégio&quot;, a chinesa Gu Ailing disse estar orgulhosa de retornar ao pódio depois de ganhar a prata na final do big air freeski feminino na noite de segunda-feira, sua segunda medalha nos Jogos e o ...</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.globaltimes.cn/page/202602/1355471.shtml" target="_blank" rel="noopener">Ano Novo na Linha de Frente: Um grupo de &#x27;inspetores&#x27; protegendo o teleférico da Montanha Huangshan</a></h2>
+        <p class="meta"><span>07:47 · Zhu Xiaoxi from People&#x27;s Daily</span></p>
+        <p class="summary">De novato a especialista experiente, o trabalhador de manutenção Wang Xiaoli protegeu esta “estrada” nas nuvens na montanha Huangshan, dia após dia, com seus colegas. Este ano, Wang mais uma vez passou um movimentado e significativo Festival da Primavera em ...</p>
+      </article>
+
+    </section>
+
+    <section class="source-section" aria-label="Xinhua China-Biz">
+      <h2 class="section-title">Xinhua China-Biz</h2>
+      <p class="section-desc">18/02/2026 às 18:08 (última atualização)</p>
+      <h3 class="section-title" style="font-size:1rem;margin-top:16px;">Últimas 24 horas</h3>
+
+      <article class="card">
+        <h2><a href="https://english.news.cn/20260218/5d8b74022f2645a2aecc5d424619718f/c.html" target="_blank" rel="noopener">Bilheteria chinesa do Festival da Primavera de 2026 ultrapassa 2 bilhões de yuans</a></h2>
+        <p class="meta"><span>13:20 · China-Biz</span></p>
+        <p class="summary"></p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://english.news.cn/20260218/d327a6d6f5464573b80c4f1c6872d900/c.html" target="_blank" rel="noopener">Empréstimos verdes da China registam crescimento notável em 2025</a></h2>
+        <p class="meta"><span>12:03 · China-Biz</span></p>
+        <p class="summary"></p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://english.news.cn/20260218/698f74f1bf6d44e28b13ab1de32707ee/c.html" target="_blank" rel="noopener">Saldo de custódia do mercado de títulos da China atinge 196,7 trilhões de yuans no final de 2025</a></h2>
+        <p class="meta"><span>09:43 · China-Biz</span></p>
+        <p class="summary"></p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://english.news.cn/20260218/04f97a357d494ec7b0bbc1f6207740ec/c.html" target="_blank" rel="noopener">China reporta superávit em conta corrente em 2025</a></h2>
+        <p class="meta"><span>06:46 · China-Biz</span></p>
+        <p class="summary"></p>
+      </article>
+
+    </section>
+
+    <section class="source-section" aria-label="SCMP — China">
+      <h2 class="section-title">SCMP — China</h2>
+      <p class="section-desc">18/02/2026 às 18:08 (última atualização)</p>
+      <h3 class="section-title" style="font-size:1rem;margin-top:16px;">Últimas 24 horas</h3>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/china/diplomacy/article/3343942/does-trumps-retreat-electric-vehicle-policy-risk-ceding-ground-china" target="_blank" rel="noopener">Trump cedeu o mercado de EV à China com a última série de mudanças políticas?</a></h2>
+        <p class="meta"><span>16:58 · Has Trump ceded EV market to China with latest string of policy shifts?</span></p>
+        <p class="summary"></p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/china/diplomacy/article/3343943/chinese-steel-hit-duties-us670-tonne-brazil-dumping-probe-concludes" target="_blank" rel="noopener">Aço chinês atingido com tarifas de até US$ 670 por tonelada após investigação de dumping no Brasil</a></h2>
+        <p class="meta"><span>16:42 · Diplomacy</span></p>
+        <p class="summary">A investigação anti-dumping do governo concluiu que as importações chinesas estavam a ser vendidas a preços injustamente baixos, prejudicando os produtores nacionais.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/china/military/article/3343858/us-offers-more-details-claim-china-conducted-secret-nuclear-weapons-test" target="_blank" rel="noopener">EUA oferecem mais detalhes sobre alegação de que China realizou teste secreto de armas nucleares</a></h2>
+        <p class="meta"><span>15:13 · Military</span></p>
+        <p class="summary">Um funcionário do Departamento de Estado diz que o alegado teste da China em 2020 foi “uma explosão singular” e confirma que os EUA voltarão aos testes nucleares.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/china/politics/article/3343893/china-widens-anti-corruption-net-catch-quasi-naked-officials" target="_blank" rel="noopener">China amplia rede anticorrupção para capturar ‘funcionários quase nus’</a></h2>
+        <p class="meta"><span>11:00 · Exclusive|China widens anti-corruption net to catch ‘quasi-naked officials’</span></p>
+        <p class="summary"></p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/china/military/article/3343934/chinese-coastguard-reveals-growing-reliance-drones-scarborough-shoal" target="_blank" rel="noopener">Guarda costeira chinesa revela crescente dependência de drones em Scarborough Shoal</a></h2>
+        <p class="meta"><span>10:15 · Military</span></p>
+        <p class="summary">A postagem do Ano Novo Lunar oferece uma visão rara do papel das aeronaves não tripuladas no treinamento e nas operações perto do disputado recife do Mar da China Meridional.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/china/politics/article/3343931/12-killed-chinas-second-deadly-lunar-new-year-firework-explosion" target="_blank" rel="noopener">12 mortos na segunda explosão mortal de fogos de artifício do Ano Novo Lunar na China</a></h2>
+        <p class="meta"><span>09:23 · Politics</span></p>
+        <p class="summary">A explosão em Hubei ocorreu dias depois de um incidente semelhante em Jiangsu, que gerou apelos do governo para evitar uma repetição.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/china/article/3343906/why-open-source-sci-fi-novel-chinas-tech-geeks-going-strong-after-20-years" target="_blank" rel="noopener">Ficção científica de código aberto amada nos círculos de tecnologia da China envia geeks para ‘consertar’ o falecido Ming</a></h2>
+        <p class="meta"><span>08:00 · China</span></p>
+        <p class="summary">O Morning Star of Linggao atraiu a atenção nos EUA, mas permaneceu fora do mainstream chinês.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/china/diplomacy/article/3343884/trumps-claim-chinese-and-russian-ships-near-greenland-not-supported-facts" target="_blank" rel="noopener">A afirmação de Trump de que navios chineses e russos perto da Groenlândia “não é apoiada por fatos”</a></h2>
+        <p class="meta"><span>07:01 · Diplomacy</span></p>
+        <p class="summary">Olafur Ragnar Grimsson, o ex-presidente da Islândia, também diz que é “importante não usar o alarmismo para justificar grandes mudanças políticas”.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/china/science/article/3343807/chinese-scientists-hit-breakthrough-2d-semiconductor-wafers" target="_blank" rel="noopener">Cientistas chineses alcançam avanço em wafers semicondutores 2D</a></h2>
+        <p class="meta"><span>06:18 · Science</span></p>
+        <p class="summary">A busca por materiais de próxima geração que possam oferecer desempenho superior nos cobiçados chips tornou-se uma prioridade global.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/china/diplomacy/article/3343887/chinese-missions-vietnam-and-singapore-warn-citizens-stay-away-gambling" target="_blank" rel="noopener">Missões chinesas no Vietnã e Cingapura alertam os cidadãos para ficarem longe do jogo</a></h2>
+        <p class="meta"><span>04:21 · Diplomacy</span></p>
+        <p class="summary">O consulado e a embaixada emitem declarações após dois incidentes distintos em que homens chineses caíram e morreram, alegadamente após jogos de azar.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/china/military/article/3343799/chinese-military-urged-overhaul-english-teaching-improve-language-skills" target="_blank" rel="noopener">O ensino da língua inglesa nas forças armadas chinesas está desatualizado e desequilibrado: relatório</a></h2>
+        <p class="meta"><span>ontem 23:56 · Military</span></p>
+        <p class="summary">Palestrantes seniores alertam que as tropas não estão recebendo as habilidades de comunicação necessárias para operar no cenário internacional.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/opinion/china-opinion/article/3342817/forging-robust-china-south-america-ties-takes-more-just-trade" target="_blank" rel="noopener">Por que o comércio por si só não tornará a China amada na América do Sul</a></h2>
+        <p class="meta"><span>ontem 20:06 · Lijia Zhang</span></p>
+        <p class="summary"></p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/us/politics/article/3343854/bipartisan-push-grows-quad-summit-trumps-china-trip" target="_blank" rel="noopener">Cresce impulso bipartidário para a cúpula do Quad antes da viagem de Trump à China</a></h2>
+        <p class="meta"><span>ontem 19:23 · Politics</span></p>
+        <p class="summary">Os legisladores instam a Casa Branca a reunir os parceiros do Indo-Pacífico antes da reunião de alto risco com Xi, citando preocupações de alavancagem e coordenação.</p>
+      </article>
+
+      <article class="card">
+        <h2><a href="https://www.scmp.com/news/china/diplomacy/article/3343850/peru-removes-president-jose-jeri-chifagate-scandal-tied-chinese-contractor" target="_blank" rel="noopener">Presidente do Peru, José Jeri, deposto no escândalo ‘Chifagate’ ligado a empreiteiro da China</a></h2>
+        <p class="meta"><span>ontem 18:22 · Diplomacy</span></p>
+        <p class="summary">Um encontro noturno com um empresário chinês em um restaurante em Lima alimentou uma investigação e criou uma grande revolta entre os partidos.</p>
+      </article>
+
+    </section>
+
+    <footer class="footer">
+      Newsflow China · Atualizado em 18/02/2026 às 18:08 · Fontes: Global Times — China, Xinhua China-Biz, SCMP — China
+    </footer>
+  </div>
+</body>
+</html>

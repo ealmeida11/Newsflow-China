@@ -20,6 +20,16 @@ python NewsFlow-app.py
 
 Gera `newsflow_diario.html` na pasta do projeto (horários em Brasília, tradução EN/ZH → PT).
 
+## Colocar a página no ar (GitHub Pages)
+
+1. No repositório no GitHub: **Settings** → **Pages**.
+2. Em **Source**, escolha **Deploy from a branch**.
+3. **Branch:** `main`, **Folder:** `/ (root)` → **Save**.
+4. Depois de rodar o app (ou o `.bat`) e dar push, a página ficará em:
+   - **https://ealmeida11.github.io/Newsflow-China/newsflow_diario.html**
+
+Sempre que rodar `rodar_newsflow_e_push.bat`, o HTML atualizado será enviado para o GitHub e a página na web será atualizada em alguns minutos.
+
 ## Estrutura
 
 | Arquivo / pasta      | Função |
