@@ -18,7 +18,7 @@ pip install -r requirements.txt
 python NewsFlow-app.py
 ```
 
-Gera `newsflow_diario.html` na pasta do projeto (horários em Brasília, tradução EN/ZH → PT).
+Gera `index.html` na pasta do projeto (horários em Brasília, tradução EN/ZH → PT). Esse arquivo é o que fica no ar no GitHub Pages.
 
 ## Colocar a página no ar (GitHub Pages)
 
@@ -26,9 +26,9 @@ Gera `newsflow_diario.html` na pasta do projeto (horários em Brasília, traduç
 2. Em **Source**, escolha **Deploy from a branch**.
 3. **Branch:** `main`, **Folder:** `/ (root)` → **Save**.
 4. Depois de rodar o app (ou o `.bat`) e dar push, a página ficará em:
-   - **https://ealmeida11.github.io/Newsflow-China/newsflow_diario.html**
+   - **https://ealmeida11.github.io/Newsflow-China/**
 
-Sempre que rodar `rodar_newsflow_e_push.bat`, o HTML atualizado será enviado para o GitHub e a página na web será atualizada em alguns minutos.
+Sempre que rodar `rodar_newsflow_e_push.bat`, o `index.html` atualizado será enviado e a página na web será atualizada em alguns minutos.
 
 ## Estrutura
 

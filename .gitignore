@@ -1,5 +1,6 @@
-# Banco e saídas geradas (newsflow_diario.html é versionado para GitHub Pages)
+# Banco e saídas geradas (index.html é versionado para GitHub Pages)
 news.db
+newsflow_diario.html
 noticias_coletadas.html
 
 # Python

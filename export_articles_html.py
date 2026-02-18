@@ -493,10 +493,10 @@ def export_newsflow_all(
     hours: int = 24,
     translate: bool = True,
 ) -> None:
-    """Gera newsflow_diario.html com todas as fontes em sources_list [(source_id, display_name), ...]."""
+    """Gera index.html (para GitHub Pages) com todas as fontes em sources_list [(source_id, display_name), ...]."""
     generated_at = datetime.now(timezone.utc)
     html_content, total = build_newsflow_html_all(sources_list, hours, generated_at, translate=translate)
-    out_path = Path(DB_PATH).parent / "newsflow_diario.html"
+    out_path = Path(DB_PATH).parent / "index.html"
     out_path.write_text(html_content, encoding="utf-8")
     print(f"Exportado: {out_path} ({total} notícias)")
 

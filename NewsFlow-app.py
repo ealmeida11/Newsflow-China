@@ -5,7 +5,7 @@ Uso: python NewsFlow-app.py
 
 - Roda todos os coletores (Global Times China, Xinhua China-Biz, etc.)
 - Grava artigos no banco SQLite
-- Gera newsflow_diario.html com todas as fontes (tradução para PT por padrão)
+- Gera index.html com todas as fontes (tradução para PT por padrão)
 """
 
 import logging
@@ -49,7 +49,7 @@ def main():
         except Exception as e:
             logger.exception("  Erro ao coletar %s: %s", display_name, e)
 
-    logger.info("Gerando newsflow_diario.html (todas as fontes, tradução PT)...")
+    logger.info("Gerando index.html (todas as fontes, tradução PT)...")
     sources_for_export = [(sid, name) for sid, name, _ in SOURCES]
     export_newsflow_all(sources_for_export, hours=24, translate=True)
     logger.info("NewsFlow-app: concluído")
