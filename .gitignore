@@ -1,0 +1,20 @@
+# Banco e saídas geradas
+news.db
+newsflow_diario.html
+noticias_coletadas.html
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+venv/
+.env
+.env.local
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
